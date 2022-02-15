@@ -18,6 +18,11 @@ use Illuminate\Support\Facades\Session;
 |
 */
 
+// Register Off
+Auth::routes([
+    'register' => false
+]);
+
 // Route Root
 Route::get('/', function () {
     return redirect()->route('company',Session::get('companyname')?? 'company');
